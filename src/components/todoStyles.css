@@ -1,0 +1,81 @@
+/* ------- Css for TodoList --------- */
+.container {
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.todos {
+    display: flex;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: #4b878bff;
+}
+
+.todos__heading {
+    font-size: 30px;
+    color: brown;
+}
+
+/* --------- Css for Single Todo ---------- */
+
+.todos__single {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #f0e1b9ff;
+    transition: 0.2s;
+}
+
+.todos__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+}
+
+.todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos__single--text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.remove {
+    background-color: #fc766aff;
+}
+/* Css for screen smaller than 1100px */
+@media (max-width:1100px) {
+    .todos {
+        width: 45%;
+    }
+}
+
+/* Css for mobile devices */
+
+@media (max-width: 700px) {
+    .todos {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+}
+
